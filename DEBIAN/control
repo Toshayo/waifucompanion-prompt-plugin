@@ -3,5 +3,5 @@ Section: misc
 Architecture: all
 Description: Prompt plugin for WaifuCompanion
 Priority: optional
-Depends: python3-venv
-Version: 1.0.0
+Depends: waifucompanion
+Version: 1.0.1
