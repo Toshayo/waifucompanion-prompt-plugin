@@ -34,12 +34,8 @@ build-deb:
     PACKAGE_NAME: "waifucompanion-prompt-plugin"
   script:
     - mkdir -p ROOTFS/opt/waifucompanion/plugins/prompt
-    - rsync -av --exclude=".git*" --exclude="DEBIAN" . ROOTFS/opt/waifucompanion/plugins/prompt
+    - rsync -av --exclude=".git*" --exclude="DEBIAN" --exclude="README.md" --exclude="ROOTFS" . ROOTFS/opt/waifucompanion/plugins/prompt
     - rsync -av DEBIAN/ ROOTFS/DEBIAN
-
-    # Set deb version
-    - >-
-      echo "Version: $(cat Config.py | grep APP_VERSION | cut -d "'" -f 2)" >> ROOTFS/DEBIAN/control
 
     # Set package installed size
     - >-
