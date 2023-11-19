@@ -1,0 +1,6 @@
+Package: waifucompanion-prompt-plugin
+Section: misc
+Architecture: all
+Description: Prompt plugin for WaifuCompanion
+Priority: optional
+Depends: python3-venv
